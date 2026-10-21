@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout – Inkwell</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="logo">Inkwell</a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Shop</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="cart.html" class="cart-link">Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="section">
+      <h2>Checkout</h2>
+      <form action="thankyou.html" method="get" class="form">
+        <fieldset>
+          <legend>Delivery address</legend>
+          <label for="fname">Full name</label>
+          <input type="text" id="fname" name="fname" required>
+          <label for="phone">Phone number</label>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+          <label for="addr">Address</label>
+          <textarea id="addr" name="addr" rows="3" required></textarea>
+          <label for="pin">Pincode</label>
+          <input type="text" id="pin" name="pin" pattern="[0-9]{6}" required>
+        </fieldset>
+        <fieldset>
+          <legend>Payment method</legend>
+          <label class="radio"><input type="radio" name="pay" value="upi" checked> UPI</label>
+          <label class="radio"><input type="radio" name="pay" value="card"> Credit / debit card</label>
+          <label class="radio"><input type="radio" name="pay" value="cod"> Cash on delivery</label>
+        </fieldset>
+        <p class="total-line">Order total: <strong>₹646</strong></p>
+        <button type="submit" class="btn">Place order</button>
+      </form>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p>© 2026 Inkwell. A practice project built with HTML5 and CSS.</p>
+    <p><a href="products.html">Shop</a> · <a href="cart.html">Cart</a> · <a href="contact.html">Contact</a></p>
+  </footer>
+</body>
+</html>
